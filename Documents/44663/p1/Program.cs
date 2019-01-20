@@ -50,8 +50,8 @@ namespace p1
 
                         while (chr != 'n')
                         {
-                            Console.WriteLine("Enter the gun that you want to buy: ");
-                            Console.WriteLine("\n1. AKM\t$200\n2. M416\t$250\n3. Kar98K\t$350\n4. Scar-L\t$190");
+                            Console.WriteLine("\nEnter the gun that you want to buy: ");
+                            Console.WriteLine("\n1. AKM\t\t$200\n2. M416\t\t$250\n3. Kar98K\t$350\n4. Scar-L\t$190");
                             var v = Console.ReadLine();
                             gun = Convert.ToInt32(v);
 
@@ -65,7 +65,7 @@ namespace p1
                                         count = Convert.ToInt32(a);
                                         totalCost += count * 200;
                                         money -= count * 200;
-                                        cart = String.Concat(cart, "\n\tAKM");
+                                        cart = String.Concat(cart, $"\n\tAKM x {count}");
                                     }
                                     else
                                         Console.WriteLine("You do not have enough funds");

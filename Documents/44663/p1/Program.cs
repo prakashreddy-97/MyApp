@@ -58,17 +58,24 @@ namespace p1
                             switch (gun)
                             {
                                 case 1:
-                                    if (money >= 200)
+                                if (money >= 200)
                                     {
                                         Console.WriteLine("Enter number of AKM's you want: ");
                                         var a = Console.ReadLine();
                                         count = Convert.ToInt32(a);
+                                    }
+                                    else
+                                        Console.WriteLine("You do not have enough funds");
+                                    if (money >= 200 * count)
+                                    {
+
                                         totalCost += count * 200;
                                         money -= count * 200;
                                         cart = String.Concat(cart, $"\n\tAKM x {count}");
                                     }
                                     else
                                         Console.WriteLine("You do not have enough funds");
+
                                     break;
 
                                 case 2:
@@ -77,44 +84,61 @@ namespace p1
                                         Console.WriteLine("Enter number of M416's you want: ");
                                         var a = Console.ReadLine();
                                         count = Convert.ToInt32(a);
-                                        totalCost += count * 250;
-                                        money -= count * 250;
-                                        cart = String.Concat(cart, "\n\tM416");
                                     }
                                     else
                                         Console.WriteLine("You do not have enough funds");
+                                    if (money >= 250 * count)
+                                    {
+
+                                        totalCost += count * 250;
+                                        money -= count * 250;
+                                        cart = String.Concat(cart, $"\n\tM416 x {count}");
+                                    }
+                                    else
+                                        Console.WriteLine("You do not have enough funds");
+
                                     break;
 
                                 case 3:
                                     if (money >= 350)
                                     {
                                         Console.WriteLine("Enter number of Kar98K's you want: ");
-                                         var a = Console.ReadLine();
+                                        var a = Console.ReadLine();
                                         count = Convert.ToInt32(a);
-                                        totalCost += count * 350;
-                                        money -= count * 350;
-                                        cart = String.Concat(cart, "\n\tKar98k");
                                     }
                                     else
                                         Console.WriteLine("You do not have enough funds");
+                                    if (money >= 350 * count)
+                                    {
+
+                                        totalCost += count * 350;
+                                        money -= count * 350;
+                                        cart = String.Concat(cart, $"\n\tKar98K x {count}");
+                                    }
+                                    else
+                                        Console.WriteLine("You do not have enough funds");
+
                                     break;
 
                                 case 4:
                                     if (money >= 190)
                                     {
                                         Console.WriteLine("Enter number of Scar-L's you want: ");
-                                         var a = Console.ReadLine();
+                                        var a = Console.ReadLine();
                                         count = Convert.ToInt32(a);
-                                        totalCost += count * 190;
-                                        money -= count * 190;
-                                        cart = String.Concat(cart, "\n\tScar-L");
                                     }
                                     else
                                         Console.WriteLine("You do not have enough funds");
-                                        
-                                    break;
-                                default:
-                                    Console.WriteLine("Enter valid input");
+                                    if (money >= 190 * count)
+                                    {
+
+                                        totalCost += count * 190;
+                                        money -= count * 190;
+                                        cart = String.Concat(cart, $"\n\tScar-L x {count}");
+                                    }
+                                    else
+                                        Console.WriteLine("You do not have enough funds");
+
                                     break;
 
                             }

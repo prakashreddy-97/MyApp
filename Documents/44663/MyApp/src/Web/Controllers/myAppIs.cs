@@ -18,7 +18,7 @@ namespace Web.Controllers
         public IActionResult showJson()
         {
             return Json(new 
-            {
+       {
                 name = "Prakash Reddy"
             });
         }

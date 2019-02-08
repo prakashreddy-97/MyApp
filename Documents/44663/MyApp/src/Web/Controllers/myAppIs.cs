@@ -8,7 +8,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
-    public class myAppIs: Controller
+    public class myAppIs : Controller
     {
         public IActionResult showText()
         {
@@ -17,19 +17,20 @@ namespace Web.Controllers
 
         public IActionResult showJson()
         {
-            return Json(new 
-       {
+            return Json(new
+            {
                 name = "Prakash Reddy"
             });
         }
 
-         public IActionResult showHtml()
+        public IActionResult showHtml()
         {
-            var v = "<!DOCTYPE HTML><html><head>Amazing! Zing Zing!!</head><body>Hey, it's working!</body></html>" ;
-            return Content(v,"text/html");
+            var v = "<!DOCTYPE HTML><html><head>Amazing! Zing Zing!!</head><body>Hey, it's working!</body></html>";
+            return Content(v, "text/html");
         }
 
-        public IActionResult AppC(){
+        public IActionResult AppC()
+        {
             return View();
         }
 

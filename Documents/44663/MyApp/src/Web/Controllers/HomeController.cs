@@ -19,7 +19,7 @@ namespace Web.Controllers
         {
             return View();
         }
-         public IActionResult Privacy1()
+         public IActionResult MyBio()
         {
             return View();
         }
